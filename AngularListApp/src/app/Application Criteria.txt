@@ -1,0 +1,23 @@
+Application Criteria (MVP):
+
+1. quick filter a list of things
+2. the page will have a search input field 
+3. a list of things in response to the filter
+    3 a. sort list Alphabetical
+    3 b. sort list by Year
+    3 c. Can be expanded to Sort by Imdb infomation in the future
+4. AJAX pulled from a movie backend service 
+
+USER STORIES:
+As a user, I can retive a list of movie + tv show Posters           -DONE
+As a user, I can sort these Posters by year and title               -DONE
+As a user, I can see the movie listed                               -DONE
+As a user, I want to see the dates listed                           -DONE
+As a user, I want to be able to retrive a list of Movies/ Shows     -DONE
+As a user, I want to know if a movie doesnt have a poster           -DONE
+
+Future User Stories + Future features:
+Implement more complex unit tests 
+Implement additional error handling
+Implement ability to add my posters to a list
+Implement ability to download the movie posters. 

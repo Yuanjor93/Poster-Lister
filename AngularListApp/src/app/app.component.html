@@ -1,0 +1,43 @@
+<html>
+<div class="container">
+  <div class="row" style="text-align:center">
+    <div text="center">
+      <h2>
+        Welcome to {{ title }}!
+      </h2>
+      <div>
+        <p>
+          Discover some of your favorite movie and tv show posters.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<form>
+<div style="text-align:justify">
+ 
+
+    <input class="form-control"  #searchMovieName placeholder="Batman" name="search" >
+    <button class="btn btn-primary" (click)="getAjaxData(searchMovieName.value)" >Search Movie</button>
+</div>
+<div  style="text-align:inherit">
+    <button class="btn btn-info" (click)="getMovieByTitle()">Filter Movie By Title</button>
+    <button class="btn btn-info" (click)="getMovieByYear()">Filter Movie by year</button>
+</div>
+
+<div>
+    <ul  class="list-group" *ngFor="let data of FinalMovie">
+      <li  class="list-group-item">
+        <span [ngSwitch]="data.Poster === 'N/A' || data.Poster !== 'N/A'">
+          <img *ngSwitchCase="data.Poster !== 'N/A'" src={{data.Poster}}  [ngClass]="{detailBodyImage: true}" class="img-responsive">
+          <img *ngSwitchCase="data.Poster === 'N/A'" src="src/app/image/not-found.png" alt="notFound" [ngClass]="{detailBodyImage: true}" class="img-responsive">
+        </span>
+        {{ data.Title }}   --- Year {{ data.Year }} </li>
+    </ul>
+ </div>
+</form>
+</html>
+
